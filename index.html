@@ -1,0 +1,56 @@
+<html>
+    <head>
+    <script type="text/javascript">
+        
+        function verifyNull() {
+            if (!document.getElementById('username').value.trim().length) {
+                alert('Please enter username');
+            }
+            else if (!document.getElementById('password').value.trim().length) {
+                alert('Please enter password');
+            }
+        }
+        function verifyEmail() {
+            var x = document.getElementById('email').value;
+            var atpos = x.indexOf("@");
+            var dotpos = x.lastIndexOf(".");
+            if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+                alert("Not a valid e-mail address");
+                return false;
+            }
+        }
+        
+            
+    </script>
+         <style>
+            .abc {
+                padding-left: 500px;
+                margin-top: 200px;
+            }
+            input {
+                margin-bottom: 20px;
+            }
+            .abcd {
+                padding-left: 100px;
+            }
+             .ema{
+                 padding-left: 5px;
+             }
+            body{
+                background-image: url(peacock.jpg);
+                color: antiquewhite;
+            }
+        
+        
+        </style>
+    <title>Webpage</title>
+    </head>
+    <body>
+      <div class="abc"> <form name = "myForm" method = "" action ="three.html">
+            Username <input type = "text" id = "username" name = "username"/><br />
+            Password <input type = "password" id = "password" name = "password" /> <br />
+          <div class="ema">Email <input type = "text" id = "email" name = "email"/> </div>
+          <div class="abcd"> <input type = "submit" value = "Submit" onClick = "verifyNull();verifyEmail();"/></div>
+        </form>
+        </div>
+    </body>
